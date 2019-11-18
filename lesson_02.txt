@@ -1,0 +1,28 @@
+ex1 = fn
+(0) -> IO.puts "People"
+(1) -> IO.puts "Person"
+end
+--------------------------------
+ex2 = fn
+0, 0, _ -> "FizzBuzz"
+0, _, _ -> "Fizz"
+_, 0, _ -> "Buzz"
+1, 1, b -> "This is #{b}"
+end
+--------------------------------
+ex3 = fn
+a, b -> "#{a}#{b}"
+end
+--------------------------------
+ex4 = fn
+a, b -> String.length(a) > String.length(b)
+end
+--------------------------------
+ex5 = fn -> x = "wonderful"
+String.at(x,3)
+String.capitalize(x)
+end
+--------------------------------
+ex6 = fn -> x = "I hate homework"
+String.replace(x, ~r/\s/, ".")
+end

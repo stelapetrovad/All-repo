@@ -8,14 +8,13 @@ defmodule Homework0304 do
     "The argument is a list, its first agument is #{head}"
   end
 
-  def first((tuple = {_, _}) = _param) do
+  def first(tuple) when is_tuple(tuple) do
     IO.puts"The argument is a tuple"
     [ head | _tail ] = Tuple.to_list(tuple)
     "The argument is a list, its first argument is #{head}"
-
   end
 
-  def first((map = %{:a => _}) = _param) do
+  def first(map = %{:a => _}) do
     Map.to_list(map)
     "The argument is a list, its first argument is #{map[:a]}"
   end
@@ -56,6 +55,7 @@ end
 
    ############# ex5 #############
    def ex5([%{name: fname, age: sage}, %{name: fname1, age: sage1}, %{name: fname2, age: sage2}]) do
+    "#{fname}: #{sage} years old,  #{fname1}: #{sage1} years old,  #{fname2}: #{sage2} years old"
     [~s(#{fname}: #{sage} years old) <> ~s(, #{fname1}: #{sage1} years old) <> ~s(, #{fname2}: #{sage2} years old)]
   end
 
